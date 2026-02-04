@@ -149,17 +149,17 @@ header {
 }
 
 /* Specific icon colors */
-/* Brands overrides - using theme color for all with improved weight for thinner icons */
 .link-btn .fa-whatsapp,
 .link-btn .fa-facebook-f,
 .link-btn .fa-instagram,
-.link-btn .fa-globe,
+.link-btn .fa-tiktok,
 .link-btn .fa-envelope {
     color: var(--chocolate);
 }
 
 .link-btn .fa-whatsapp,
-.link-btn .fa-instagram {
+.link-btn .fa-instagram,
+.link-btn .fa-tiktok {
     font-size: 30px;
     /* Slightly larger to match Facebook's visual weight */
     filter: drop-shadow(0.5px 0 0 var(--chocolate)) drop-shadow(-0.5px 0 0 var(--chocolate));
@@ -235,17 +235,7 @@ footer {
     margin-bottom: 10px;
 }
 
-.footer-email {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 14px;
-    opacity: 0.8;
-}
 
-.footer-email:hover {
-    opacity: 1;
-    color: var(--gold);
-}
 
 /* Animations */
 @keyframes slideIn {
