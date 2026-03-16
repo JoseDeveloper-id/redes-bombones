@@ -71,6 +71,31 @@ header {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
+/* Botón Catálogo en el header */
+.catalogo-header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+    color: var(--white);
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.catalogo-header-btn i {
+    font-size: 22px;
+}
+
+.catalogo-header-btn:hover {
+    color: var(--gold);
+    transform: scale(1.15);
+}
+
 /* Quick Social Icons (The horizontal row from the image) */
 .social-icons-row {
     display: flex;
