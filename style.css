@@ -1,0 +1,300 @@
+:root {
+    --chocolate: #3d1c02;
+    --chocolate-dark: #2a1301;
+    --chocolate-light: #5d2e0a;
+    --cream: #fdf5e6;
+    --gold: #d4af37;
+    --gold-bright: #ffdf00;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --glass: rgba(255, 255, 255, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    /* Use the generated background image if available, otherwise a rich gradient */
+    background: linear-gradient(to bottom, rgba(42, 19, 1, 0.7), rgba(42, 19, 1, 0.9)),
+        url('chocolate_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header & Logo */
+header {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.logo-wrapper {
+    width: 280px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Removed white background and borders to let the logo's own style shine */
+}
+
+.main-logo {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+}
+
+.tagline {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: -5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Botón Catálogo en el header */
+.catalogo-header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+    color: var(--white);
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.catalogo-header-btn i {
+    font-size: 22px;
+}
+
+.catalogo-header-btn:hover {
+    color: var(--gold);
+    transform: scale(1.15);
+}
+
+/* Quick Social Icons (The horizontal row from the image) */
+.social-icons-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icon-btn {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.social-icon-btn:hover {
+    transform: scale(1.2);
+    color: var(--gold);
+}
+
+/* Main Buttons (Styled like the reference image) */
+.links-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--chocolate);
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+}
+
+.link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background: #fafafa;
+}
+
+.link-btn .btn-icon-circle {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: var(--chocolate);
+    flex-shrink: 0;
+    background: transparent;
+    margin-right: -32px;
+    /* Pull text to center */
+}
+
+.link-btn .btn-text {
+    flex: 1;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    color: var(--chocolate);
+}
+
+/* Specific icon colors */
+.link-btn .fa-whatsapp,
+.link-btn .fa-facebook-f,
+.link-btn .fa-instagram,
+.link-btn .fa-tiktok,
+.link-btn .fa-envelope {
+    color: var(--chocolate);
+}
+
+.link-btn .fa-whatsapp,
+.link-btn .fa-instagram,
+.link-btn .fa-tiktok {
+    font-size: 30px;
+    /* Slightly larger to match Facebook's visual weight */
+    filter: drop-shadow(0.5px 0 0 var(--chocolate)) drop-shadow(-0.5px 0 0 var(--chocolate));
+    /* Faux bold effect */
+}
+
+
+
+/* Map Section */
+.location-card {
+    width: 100%;
+    background: var(--white);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px var(--shadow);
+    margin-bottom: 30px;
+}
+
+.map-container {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    /* Base for overlay */
+    cursor: pointer;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: transparent;
+}
+
+.map-link {
+    text-decoration: none;
+    display: block;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.location-info {
+    padding: 20px;
+    background: var(--white);
+    color: var(--chocolate);
+    text-align: center;
+}
+
+.address-text {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.btn-directions {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 35px;
+    background: var(--chocolate);
+    color: var(--gold);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-directions:hover {
+    background: var(--chocolate-light);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.regale-dulzura {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container>* {
+    animation: slideIn 0.8s ease forwards;
+}
